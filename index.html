@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -367,8 +367,8 @@
         }
         
         /* Language content switching */
-        [lang="en"] [data-lang-es],
-        [lang="es"] [data-lang-en] {
+        [lang="en"] [data-lang-it],
+        [lang="it"] [data-lang-en] {
             display: none;
         }
         
@@ -481,6 +481,12 @@
         // Language switcher functionality
         const languageButtons = document.querySelectorAll('.language-selector button');
         
+        // Set initial language based on active button
+        const activeButton = document.querySelector('.language-selector button.active');
+        if (activeButton) {
+            document.documentElement.lang = activeButton.getAttribute('data-lang');
+        }
+        
         languageButtons.forEach(button => {
             button.addEventListener('click', function() {
                 // Remove active class from all buttons
@@ -511,7 +517,7 @@
 <body>
     <div class="top-bar">
         <div class="language-selector">
-            <button data-lang="es" class="active">ES</button>
+            <button data-lang="it" class="active">IT</button>
             <button data-lang="en">EN</button>
         </div>
     </div>
@@ -519,19 +525,19 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="C5Cxl1mf_400x400.png" alt="Xdori">
+                <img src="photo_2025-05-21_19-20-11.jpg" alt="Xdori">
             </div>
         </div>
             
         <div class="main-offer">
             <h1>
                 <span data-lang-en>EXCLUSIVE OFFER!<br>250% up to €1000 + 200 FS + 1 Bonus Crab<br></span>
-                <span data-lang-es>¡OFERTA EXCLUSIVA!<br>250% fino a €1000 + 200 Giri + 1 Bonus Crab<br></span>
+                <span data-lang-it>OFFERTA ESCLUSIVA!<br>250% fino a €1000 + 200 Giri + 1 Bonus Crab<br></span>
             </h1>
 
 <a href="https://bit.ly/Xdori7ALLYSPIN" class="cta-button">
     <span data-lang-en>GET YOUR BONUS</span>
-    <span data-lang-es>OBTÉN TU BONO</span>
+    <span data-lang-it>OTTENI IL BONUS</span>
 </a>
 
         </div>
@@ -540,17 +546,17 @@
             <div class="step-item">
                 <span class="step-number">1</span>
                 <span data-lang-en>Join</span>
-                <span data-lang-es>Únete</span>
+                <span data-lang-it>Registrati</span>
             </div>
             <div class="step-item">
                 <span class="step-number">2</span>
                 <span data-lang-en>Deposit</span>
-                <span data-lang-es>Recarga</span>
+                <span data-lang-it>Deposita</span>
             </div>
             <div class="step-item">
                 <span class="step-number">3</span>
                 <span data-lang-en>Win</span>
-                <span data-lang-es>Gana</span>
+                <span data-lang-it>Vinci</span>
             </div>
         </div>
 
@@ -559,7 +565,7 @@
                 <div class="casino-name">AllySpin</div>
                 <a href="https://bit.ly/Xdori7ALLYSPIN" class="play-button">
                     <span data-lang-en>CLAIM</span>
-                    <span data-lang-es>CANJEAR</span>
+                    <span data-lang-it>RISCATTA</span>
                 </a>
             </div>
         </div>
@@ -570,28 +576,28 @@
                     <div class="perk-icon">🎮</div>
                     <div class="perk-title">
                         <span data-lang-en>200 FREE SPINS</span>
-                        <span data-lang-es>200 TIRADAS GRATIS</span>
+                        <span data-lang-it>200 GIRI GRATUITI</span>
                     </div>
                 </div>
                 <div class="perk-item">
                     <div class="perk-icon">💰</div>
                     <div class="perk-title">
-                        <span data-lang-en>250% UP TO 1000€</span>
-                        <span data-lang-es>250% HASTA 1000€</span>
+                        <span data-lang-en>250% UP TO €1000</span>
+                        <span data-lang-it>250% FINO A €1000</span>
                     </div>
                 </div>
                 <div class="perk-item">
                     <div class="perk-icon">🎲</div>
                     <div class="perk-title">
                         <span data-lang-en>ALLYSPIN CASINO</span>
-                        <span data-lang-es>CASINO ALLYSPIN</span>
+                        <span data-lang-it>CASINO ALLYSPIN</span>
                     </div>
                 </div>
                 <div class="perk-item">
                     <div class="perk-icon">🦀</div>
                     <div class="perk-title">
                         <span data-lang-en>BONUS CRAB</span>
-                        <span data-lang-es>BONUS CRAB</span>
+                        <span data-lang-it>BONUS CRAB</span>
                     </div>
                 </div>
             </div>
@@ -618,11 +624,11 @@
             
             <p class="footer-text">
                 <span data-lang-en>Terms & Conditions apply. New players only. 18+. Please gamble responsibly.</span>
-                <span data-lang-es>Se aplican términos y condiciones. Solo nuevos jugadores. 18+.</span>
+                <span data-lang-it>Si applicano termini e condizioni. Solo nuovi giocatori. 18+. Gioca responsabilmente.</span>
             </p>
             <p class="footer-text">
                 <span data-lang-en>© 2024 Xdori. All rights reserved.</span>
-                <span data-lang-es>© 2024 Xdori. Todos los derechos reservados.</span>
+                <span data-lang-it>© 2024 Xdori. Tutti i diritti riservati.</span>
             </p>
         </div>
     </div>
